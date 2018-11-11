@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Média Aluno</title>
+        <meta charset="utf-8">
+        <link href="meucss.css" rel="stylesheet" type="text/css">
+        <script src="jquery.min.js"></script>
+        <script src="meuscript.js"></script>
+        <script>
+            function ValidaCampos(){
+                $("#vazio, #vazio1, #vazio2, #vazio3, #vazio4, #vazio5, #vazio6").empty();
+                
+                $("#vazio, #vazio1, #vazio2, #vazio3, #vazio4, #vazio5, #vazio6").removeClass("alerta");
+                
+                if($("#nome").val()==""){
+                    $("#vazio").addClass("alerta");
+                    $("#vazio").html(" Preencha os dados do cliente corretamente: ");
+                    $("#nome").focus();
+                    return false;
+
+                }if($("#telefone").val()==""){
+                    $("#vazio1").addClass("alerta");
+                    $("#vazio1").html("Preencha os dados do cliente corretamente: ");
+                    $("#rgm").focus();
+                    return false;
+
+                }if($("#end").val()==""){
+                    $("#vazio2").addClass("alerta");
+                    $("#vazio2").html(" Preencha os dados do cliente corretamente: ");
+                    $("#parcial").focus();
+                    return false;
+
+                }if($("#tamanho").is(":checked") || $("#tamanho1").is(":checked") || $("#tamanho2").is(":checked")){
+                    
+                }else{
+                    $("#vazio3").addClass("alerta");
+                    $("#vazio3").html("Escolha o tamanho da Pizza! ");
+                    $("#tamanho").focus();
+                    return false;
+                    
+                }if($("#sabores").val()==""){
+                    $("#vazio4").addClass("alerta");
+                    $("#vazio4").html(" Escolha pelo menos um sabor: ");
+                    $("#parcial").focus();
+                    return false;
+
+                }if($("#ingredienteE").val()==""){
+                    $("#vazio5").addClass("alerta");
+                    $("#vazio5").html(" Não gostaria de acrescentar um Ingrediente Extra? ");
+                    $("#ingredienteE").focus();
+                    return false;
+
+                }if($("#pagamento").val()==""){
+                    $("#vazio6").addClass("alerta");
+                    $("#vazio6").html(" Informar forma de Pagamento! ");
+                    $("#pagamento").focus();
+                    return false;
+
+                }return true;
+            }
+        
+            
+            $(function(){           
+                $("#calc").click(function(){
+                    ValidaCampos();
+                });
+            });
+            
+            
+        </script>
+        
+    </head>
+
+    <body>
+        <div id="geral">
+        <h2 class="pra"> Monte sua pizza </h2><br>
+        
+        
+        
+        <form name="form1" method="post" action="">
+            <h3 class="pre"> Dados do cliente</h2>
+            
+            <p>Nome:  <br><input type="text" id="nome" class="pru"><span id="vazio"></span>  </p>
+            <p>Telefone:  <input type="text" id="telefone" class="pru"><span id="vazio1"></span>  </p>
+            <p>Endereço:  <input type="text" id="end" class="pru"><span id="vazio2"></span>  </p>
+        
+        </form>
+        
+        <span id="dadosPedido"></span><br>
+        
+        <form name="form2" method="post" action=""> 
+            
+            <h3 class="pre"> Dados do pedido</h2>
+            
+            <p class="tam">Tamanho: </p> 
+                <input name="tamanhoP" type="radio" id="tamanho" value="radio1">Brotinho
+                <input name="tamanhoP" type="radio" id="tamanho1" value="radio2">Média
+                <input name="tamanhoP" type="radio" id="tamanho2" value="radio3">Grande <span id="vazio3"></span>
+            
+            <p class="tam">Sabores: </p>
+            
+            <select name="sabores" id="sabores"> 
+              <option value="">---Escolha um sabor---</option>
+              <option value="cala">Calabresa</option>
+              <option value="queijo">Queijo</option>
+              <option value="atum">Atum</option>
+              <option value="frango">Frango Catupiry</option>
+            </select><span id="vazio4"></span>
+            
+            <p class="tam">Ingrediente Extra: </p>
+            <input id="ingredienteE" list="ing" />
+            <datalist id="ing">
+            <option value="Não">
+            <option value="Cebola">
+            <option value="Tomate">
+            <option value="Milho">
+            </datalist><span id="vazio5"></span>
+        </form><br>
+        
+            <form name="form3" method="post" action="">                
+                
+                <h4 id="pag">Forma de Pagamento:</h4>
+                
+                <select name="pagamento" id="pagamento">                    
+                <option value=""></option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cart">Cartão</option>
+                <option value="cheq">Cheque</option>
+                <option value="out">Outros</option>
+                </select><span id="vazio6"></span><br>
+                
+                <div id="juju"></div>
+                
+                <input type="button" id="calc" value="Fechar Pedido" />
+                
+            </form>
+        
+        
+    
+    
+        </div>
+    </body>
+
+</html>

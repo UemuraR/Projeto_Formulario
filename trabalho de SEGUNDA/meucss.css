@@ -1,0 +1,60 @@
+#geral{
+    font-family: cursive;
+}
+
+.pra{
+    border: solid 2px #aaF;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: auto;
+}
+
+form{
+    border: solid 2px #aaF;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: auto;
+}
+
+.pre{
+    margin-top: -26px;
+    background: #fff;
+    width: 155px;
+}
+
+/*#dadosPedido{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14pt;
+    border: solid 2px #aaF;
+}
+*/
+
+.tam{
+    font-weight: bold;
+}
+
+.pru{
+    width: 100%;
+}
+
+#tra{
+    margin-top: -25px;
+    background: #fff;
+    width: 168px;
+}
+
+#juju{
+    margin-bottom: 10px;
+}
+
+.alerta{    
+    font-weight: 600;
+    color: red;
+    padding: 10px;
+    margin-left: 10px;
+}
