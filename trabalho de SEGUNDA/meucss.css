@@ -15,7 +15,7 @@ form{
     padding: 10px;
     margin: 10px;
     width: 500px;
-    height: auto;
+    height: auto; 
 }
 
 .pre{
@@ -24,15 +24,14 @@ form{
     width: 155px;
 }
 
-/*#dadosPedido{
+#dadosPedido{
     width: 500px;
     height: auto;
     padding: 10px;
     margin: 10px;
     font-size: 14pt;
-    border: solid 2px #aaF;
+    margin-bottom: 30px;
 }
-*/
 
 .tam{
     font-weight: bold;
@@ -57,4 +56,19 @@ form{
     color: red;
     padding: 10px;
     margin-left: 10px;
+}
+
+.backRed{
+    background-color: rgb(230, 129, 129);
+    border: solid 2px rgb(241, 9, 9);
+}
+
+.backBlue{
+    background-color: rgb(176, 167, 255);
+    border: solid 2px rgb(30, 15, 231);
+}
+
+.backGreen{
+    background-color: rgb(181, 255, 199);
+    border: solid 2px rgb(3, 180, 47);
 }
